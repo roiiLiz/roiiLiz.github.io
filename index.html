@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/brand.png" />
+  <link rel="icon" type="image/ico" href="./images/favicon.ico" />
   <title>
     Liz Thompson | Game Play Programmer
   </title>
@@ -13,6 +13,7 @@
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="HTML, CSS, JavaScript, C#, GDScript" />
   <link rel="stylesheet" href="index.css" />
+  <script defer src="./index.js"></script>
 </head>
 
 <body>
@@ -23,11 +24,13 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item">
+          <li class="nav__item hidden">
+            <a href="#work" class="nav__link">Work</a>
+          </li>
+          <li class="nav__item hidden">
             <a href="#about" class="nav__link">About</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item hidden">
             <a href="#contact" class="nav__link">Contact</a>
           </li>
         </ul>
@@ -37,11 +40,11 @@
       <div class="header__text">
         <h1 class="heading-primary">
           <!-- Replace the following name with your name -->
-          <span>Liz Thompson</span>
+          <span class="hidden">Liz Thompson</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>Game Play Programmer</p>
-        <a href="#contact" class="btn btn--pink">Contact Me</a>
+        <p class="hidden">Game Play Programmer</p>
+        <a href="#contact" class="btn btn--pink hidden">Contact Me</a>
       </div>
     </div>
   </header>
@@ -58,49 +61,43 @@
           <!-- Each div with the work__box class is a project. -->
 
           <div class="work__box">
-            <div class="work__text">
+            <div class="work__text hidden">
               <h3>Realm Runner</h3>
               <p>
-                An action platformer-rougelite hybrid made by SkyStride Studios as a capstone project.
+                An action platformer-rougelite hybrid made by Sky Stride Games as a capstone project. Compete for the title of Realm Runner as Astro, speeding your way through a myriad of realms and environments!
               </p>
   
-              <ul class="work__list">
-                <li>High-quality</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
-              </ul>
+              <p>
+                Made in Unreal Engine 5.4, this project was my first foray into Unreal and it's visual scripting Blueprints. My main responsiblities for this project were the character's movement and physics, alongside creating various gameplay systems.
+              </p>
 
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
+              <div class="work__links hidden">
+                <a href="#" target="_blank" class="link__text">
                   Visit Site <span>&rarr;</span>
                 </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
+                <a href="#" title="View Source Code" target="_blank">
                   <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Realm Runner" />
+            <div class="work__image-box hidden">
+              <embed width="525" height="350" src="https://www.youtube.com/embed/a6oPJT0r7a8" title="astro homing attack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></embed>
+              <!-- <img src="./images/project-1.png" class="work__image" alt="Realm Runner" /> -->
             </div>
           </div>
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Calculator</h3>
+              <h3>Reflection Quest</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
+                A 3rd person 3D RPG made by Nine Nytes for class.
               </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
+              <p>
+                An
+              </p>
 
               <div class="work__links">
-                <a href="#" class="link__text">
+                <a href="https://ninenytes.itch.io/reflection-quest" target="_blank" class="link__text">
                   Visit Site <span>&rarr;</span>
                 </a>
                 <a href="#">
@@ -161,7 +158,7 @@
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+            <img class="about__photo" src="" alt="" />
           </div>
         </div>
       </div>
@@ -178,7 +175,7 @@
           Are you looking for a friendly, cooperative, and determined programmer? Are you curious about the implementation of a specific project of mine? Are you interested in my most recent projects? If the answer to any of these questions is yes, please feel free to message me, and I'll get back to you as soon as possible.
         </p>
         <!-- Replace the email with yours -->
-        <a href="mailto:hunterj32819@gmail@example.com" class="btn">Email</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hunterj32819@gmail.com" target="_blank" class="btn">Email</a>
       </div>
     </div>
   </section>
@@ -217,7 +214,6 @@
   <a href="#top" class="back-to-top" title="Back to Top">
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
-  <script src="./index.js"></script>
 </body>
 
 </html>
