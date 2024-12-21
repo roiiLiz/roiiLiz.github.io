@@ -2,6 +2,27 @@
   Have focus outline only for keyboard users 
  ---------------------------------------- */
 
+const collapsibles = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < collapsibles.length; i++)
+ {
+   collapsibles[i].addEventListener("click", function() {
+     this.classList.toggle("active");
+     var otherContent = this.nextElementSibling;
+     if (otherContent.style.display === "flex")
+     {
+       otherContent.style.display = "none";
+       otherContent.style.maxHeight = "0";
+     } else
+     {
+       otherContent.style.display = "flex";
+       otherContent.style.maxHeight = "100%";
+     }
+   })
+ }
+ 
+
 const observer = new IntersectionObserver((entries) =>
 {
   entries.forEach((entry) => 

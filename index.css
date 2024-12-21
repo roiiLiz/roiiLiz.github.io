@@ -85,7 +85,7 @@ body {
     background: linear-gradient(-45deg, #c78bb4, #d15c54, #a7c78b, #83e5f2);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 200vh;
+    /* height: 200vh; */
     overflow-x: hidden;
 }
 
@@ -238,11 +238,27 @@ body:not(.user-is-tabbing) a:focus {
     outline: none;
 }
 
+.collapsible
+{
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    padding: var(--gutter-small);
+    margin-top: var(--gutter-normal);
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: var(--font-size-normal);
+    font-family: var(--font-stack);
+}
+
 .link:hover {
     color: var(--blue);
 }
 
 .btn {
+    margin-bottom: var(--gutter-normal);
     position: relative;
     display: inline-block;
     padding: 1rem 4.2rem;
@@ -467,14 +483,43 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Work ----- */
 /* --------------------------------------- */
 
-.work
+/* /* .text_with_image
 {
-    background-color: rgba(0, 0, 0, 0.2);
-    
+    text-align: justify;
+} */
+
+.code__grid
+{
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: repeat (5, 20%);
+    justify-items: center;
+    gap: var(--gutter-small);
+}
+
+.grid__item1
+{
+    grid-column: span 4;
+    /* margin-left: var(--gutter-small);
+    padding: var(--gutter-small); */
+}
+
+.grid__item2
+{
+    grid-column: span 1;
+}
+
+.grid__item3
+{
+    grid-column: span 5;
 }
 
 .work__box {
-    display: flex;
+    display: none;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: var(--gutter-medium);
+    padding: var(--gutter-medium);
     align-items: center;
 }
 
@@ -514,15 +559,15 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-.work__box:not(:last-child) {
+/* .work__box:not(:last-child) {
     margin-bottom: 25rem;
-}
+} 
 
-@media(max-width: 500px) {
+ @media(max-width: 500px) {
     .work__box:not(:last-child) {
         margin-bottom: 20rem;
     }
-}
+} */
 
 .work__links {
     display: flex;
@@ -531,11 +576,13 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__text {
     flex: 0 0 40%;
+    color: var(--white);
 }
 
 .work__list {
     /* list-style-type: square; */
     list-style-position: inside;
+    color: var(--white);
     margin-bottom: var(--gutter-normal);
 }
 

@@ -38,7 +38,7 @@
     </div>
     <div class="header__text-box row">
       <div class="header__text">
-        <h1 class="heading-primary hidden">
+        <h1 class="heading-primary">
           <!-- Replace the following name with your name -->
           <span>Liz Thompson</span>
         </h1>
@@ -54,12 +54,11 @@
     <!-- ***** Work ***** -->
 
     <section class="work" id="work">
-      <div class="row hidden">
+      <div class="row">
         <h2>My Work</h2>
         <div class="work__boxes">
-
           <!-- Each div with the work__box class is a project. -->
-
+          <button type="button" class="collapsible">Realm Runner</button>
           <div class="work__box">
             <div class="work__text hidden">
               <h3>Realm Runner</h3>
@@ -74,8 +73,10 @@
                 <li>Gameplay Systems</li>
               </ul>
 
+              <a href="pages/realm_runner.html" class="btn btn--blue hidden" target="_blank" title="Code Breakdown">Code Breakdown</a>
+
               <div class="work__links hidden">
-                <a href="#" target="_blank" class="link__text">
+                <a href="https://chandlercrum.itch.io/realm-runner" target="_blank" class="link__text">
                   Visit Site <span>&rarr;</span>
                 </a>
                 <a href="https://github.com/roiiLiz" title="View Source Code" target="_blank">
@@ -83,12 +84,16 @@
                 </a>
               </div>
             </div>
+          
+          
             <div class="work__image-box hidden">
-              <embed width="525" height="350" src="https://www.youtube.com/embed/a6oPJT0r7a8" title="astro homing attack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></embed>
-              <!-- <img src="./images/project-1.png" class="work__image" alt="Realm Runner" /> -->
+              <!-- In the future, replace this with trailer video -->
+              <img src="./images/realm runner.gif" class="work__image" alt="Realm Runner" />
+              <!-- <embed width="525" height="350" src="https://www.youtube.com/embed/a6oPJT0r7a8" title="astro homing attack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></embed> -->
             </div>
           </div>
-
+          
+          <button type="button" class="collapsible">Reflection Quest</button>
           <div class="work__box">
             <div class="work__text hidden">
               <h3>Reflection Quest</h3>
@@ -104,6 +109,8 @@
                 <li>Character Movement</li>
                 <li>Camera Effects / Visual Shaders</li>
               </ul>
+
+              <a href="pages/reflection_quest.html" class="btn btn--blue hidden" target="_blank" title="Code Breakdown">Code Breakdown</a>
 
               <div class="work__links hidden">
                 <a href="https://ninenytes.itch.io/reflection-quest" target="_blank" class="link__text">
@@ -176,7 +183,7 @@
 
   <!-- ***** Contact ***** -->
 
-  <section class="contact hidden" id="contact">
+  <section class="contact" id="contact">
     <div class="row">
       <h2>Contact Me</h2>
       <div class="contact__info hidden">

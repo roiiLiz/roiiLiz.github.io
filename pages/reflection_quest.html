@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/ico" href="../images/favicon.ico" />
+  <title>
+    Reflection Quest
+  </title>
+
+  <meta name="description" content="Reflection Quest Code Breakdown">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Unity" />
+  <link rel="stylesheet" type="text/css" href="../index.css" />
+  <script defer src="../index.js"></script>
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item hidden">
+            <a href="../index.html" class="nav__link">Home</a>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Reflection Quest</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p class="hidden">Code Breakdown</p>
+      </div>
+    </div>
+  </header>
+
+
+    <!-- ***** Work ***** -->
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <p>All code is available upon request.</p>
+        <div class="work__boxes">
+          <!-- Each div with the work__box class is a project. -->
+          <button type="button" class="collapsible">2.5D Camera</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>2.5D Camera</h3>
+              <p>
+                One of Reflection Quest's most unique features is its pixelated 3D aesthetic. Typically, this effect is achieved through the use of custom shader, however this could not be used due to complications with the version of Unity used for the project.
+              </p>
+              <p>
+                Instead, the game utilizes a dual camera set-up to output and display a pixelated game world without downscaling resolution, allowing for high fidelity graphics in the UI.
+              </p>
+            </div>
+            <div class="work__image-box hidden">
+              <img width="525" height="350" src="../images/camera.gif" alt="2.5D Camera Example">
+            </div>
+
+                <!-- <div class="grid__item3">
+                  <img src="../images/IMG_3719.png" class="work__image" alt="Movement Blueprint"></img>
+                </div> -->
+              </div>
+            </div>
+          
+          <button type="button" class="collapsible">Modular Swords</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>Modular Swords</h3>
+              <p>
+                The player is given the option of selecting one of three different swords to help them on their journey.  
+              </p>
+              <p>
+                Leveraging Unity's ScriptableObjects, the data of any sword can quickly be changed in editor. This includes the sword's model, damage, and power.
+              </p>
+            </div>
+              <div class="work__image-box hidden">
+                <img width="525" height="350" src="../images/swords.gif" alt="Modular Swords Example">
+              </div>
+            </div>
+
+            <button type="button" class="collapsible">Event-Based Powers</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>Event-Based Powers</h3>
+              <p>
+                Using an event based architecture, each sword's powers can inform all systems when an ability has been started.  
+              </p>
+              <p>
+                For example, the ability of the Fire Sword can inform the UI to start a visual cooldown and inform its target that it's been hit and apply damage effects.
+              </p>
+            </div>
+              <div class="work__image-box hidden">
+                <img width="525" height="350" src="../images/event.gif" alt="Event Architecture Example">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  <!-- ***** Footer ***** -->
+
+  <!-- <footer role="contentinfo" class="footer"> -->
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/roiiLiz" title="Link to my Github Profile">
+            <img src=".././images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/liz-thompson-172457337/">
+            <img src=".././images/linkedin.svg" title="Link to my LinkedIn Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+      <p>
+        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+      </p>
+      <div class="footer__github-buttons">
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+        </iframe>
+      </div>
+    </div>
+  <!-- </footer> -->
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src=".././images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+</body>
+
+</html>

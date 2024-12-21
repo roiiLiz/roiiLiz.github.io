@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/ico" href="../images/favicon.ico" />
+  <title>
+    Realm Runner
+  </title>
+
+  <meta name="description" content="Realm Runner Code Breakdown">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Unreal Engine 5.4, UE5.4, UE" />
+  <link rel="stylesheet" type="text/css" href="../index.css" />
+  <script defer src="../index.js"></script>
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item hidden">
+            <a href="../index.html" class="nav__link">Home</a>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Realm Runner</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p class="hidden">Code Breakdown</p>
+      </div>
+    </div>
+  </header>
+
+
+    <!-- ***** Work ***** -->
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <p>All code is available upon request.</p>
+        <div class="work__boxes">
+          <!-- Each div with the work__box class is a project. -->
+          <button type="button" class="collapsible">Character Movement</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>Character Movement</h3>
+              <p>
+                One of my main responsibilities on this project was the creation of a character controller which could handle dynamic gravity, as well as maintaining good control throughout.
+              </p>
+              <p>
+                The player's dynamic gravity is calculated using the normal of the ground underneath them. Due to the changing gravity, constant calculations are made to determine the player's movement vectors using the cross product.
+              </p>
+            </div>
+            <div class="work__image-box hidden">
+              <img width="525" height="350" src="../images/slope movement.gif" alt="Slope Movement Example">
+            </div>
+
+                <!-- <div class="grid__item3">
+                  <img src="../images/IMG_3719.png" class="work__image" alt="Movement Blueprint"></img>
+                </div> -->
+              </div>
+            </div>
+          
+          <button type="button" class="collapsible">Homing Attack</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>Homing Attack</h3>
+              <p>
+                Several interactable objects within levels, whether it be boost pads, springs, or enemies, are able to be targeted with a homing attack. 
+              </p>
+              <p>
+                Using an interface called BPI_TargetFunctionality, each targetable object can implement it's own logic for the target point of the homing attack. 
+              </p>
+            </div>
+              <div class="work__image-box hidden">
+                <img width="525" height="350" src="../images/homing attack.gif" alt="Homing Attack Example">
+              </div>
+            </div>
+
+            <button type="button" class="collapsible">Items</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>Items</h3>
+              <p>
+                After finishing each level, the player is presented a choice between three different items, each of which provide the player with a unique power.  
+              </p>
+              <p>
+                Items inherit from a base item class, and are stored in an inventory component which persists between levels. 
+              </p>
+            </div>
+              <div class="work__image-box hidden">
+                <img width="525" height="350" src="../images/item example.gif" alt="Item Example">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  <!-- ***** Footer ***** -->
+
+  <!-- <footer role="contentinfo" class="footer"> -->
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/roiiLiz" title="Link to my Github Profile">
+            <img src=".././images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/liz-thompson-172457337/">
+            <img src=".././images/linkedin.svg" title="Link to my LinkedIn Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+      <p>
+        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+      </p>
+      <div class="footer__github-buttons">
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+        </iframe>
+      </div>
+    </div>
+  <!-- </footer> -->
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src=".././images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+</body>
+
+</html>
