@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/ico" href="../images/favicon.ico" />
+  <title>
+    Time Bullet
+  </title>
+
+  <meta name="description" content="Time Bullet Code Breakdown">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Unity" />
+  <link rel="stylesheet" type="text/css" href="../index.css" />
+  <script defer src="../index.js"></script>
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item hidden">
+            <a href="../index.html" class="nav__link">Home</a>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Time Bullet</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p class="hidden">Code Breakdown</p>
+      </div>
+    </div>
+  </header>
+
+
+    <!-- ***** Work ***** -->
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <p>All code is available upon request.</p>
+        <div class="work__boxes">
+          <!-- Each div with the work__box class is a project. -->
+          <button type="button" class="collapsible">Custom Time Scale Ability</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>Custom Time Scale Ability</h3>
+              <p>
+                One of TimeBullet's main features is the ability to use a custom time scale which allows the player to slow down everything but themselves. At its peak, this ability can stop enemies and bullets, both hostile and otherwise completely, allowing the player to escape otherwise impossible situations.
+              </p>
+              <p>
+                Using an event-based system to allow any script to subscribe to the custom time scale, the ability is highly extensible and flexible.
+              </p>
+            </div>
+            <div class="work__image-box hidden">
+              <img width="525" height="350" src="../images/timeBullet_1.gif" alt="Custom Time Scale Example">
+            </div>
+
+                <!-- <div class="grid__item3">
+                  <img src="../images/IMG_3719.png" class="work__image" alt="Movement Blueprint"></img>
+                </div> -->
+              </div>
+            </div>
+          
+          <button type="button" class="collapsible">Component-Based Architecture</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>Component-Based Architecture</h3>
+              <p>
+                One of TimeBullet's main goals was to learn and incorperate the ECS architecture to allow for easy creation of any entity, whether it be a player or a new enemy.  
+              </p>
+              <p>
+                General features such as health, death cleanup, and movement are made into components which can be added to any object. Specific implementation, such as input for the player or AI for enemies, is seperated from the components, making code more modular and re-useable.
+              </p>
+            </div>
+              <div class="work__image-box hidden">
+                <img width="525" height="350" src="../images/timeBullet_2.gif" alt="Components Example">
+              </div>
+            </div>
+
+            <button type="button" class="collapsible">Upgrade System</button>
+          <div class="work__box">
+            <div class="work__text hidden">
+              <h3>Upgrade System</h3>
+              <p>
+                As a part of TimeBullet's gameplay loop, players are rewarded with the option of one of three upgrades. These upgrades can improve player damage output, player movement speed, and increase the effect of the player's time dialation ability.
+              </p>
+              <p>
+                By inheriting from a base upgrade class and utilizing ScriptableObjects, the upgrade system is highly extensible. Several other systems such as experience and leveling were created to facilitate the upgrade system.
+              </p>
+            </div>
+              <div class="work__image-box hidden">
+                <img width="525" height="350" src="../images/timeBullet_3.gif" alt="Event Architecture Example">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  <!-- ***** Footer ***** -->
+
+  <!-- <footer role="contentinfo" class="footer"> -->
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/roiiLiz" title="Link to my Github Profile">
+            <img src=".././images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/liz-thompson-172457337/">
+            <img src=".././images/linkedin.svg" title="Link to my LinkedIn Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+      <p>
+        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+      </p>
+      <div class="footer__github-buttons">
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+        </iframe>
+      </div>
+    </div>
+  <!-- </footer> -->
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src=".././images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+</body>
+
+</html>
