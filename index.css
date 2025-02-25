@@ -11,24 +11,11 @@
     src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
 }
 
-/* @font-face {
-    font-family: 'Hk Grotesk';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Jost';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/Jost-Regular.ttf') format('woff');
-} */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    font-family: var(--font-stack);
 }
 
 :root {
@@ -45,6 +32,10 @@
 
     --black: #000;
     --blue: #3269ff;
+    --hover-blue: #5179e7;
+    --card-default-color: #3C474B;
+    --card-hover-color: #162521;
+    --card-header-color: #6590be;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -185,7 +176,7 @@ h2::after {
 
 h3 {
     font-size: var(--font-size-medium-1);
-    margin-bottom: var(--gutter-small);
+    /* margin-bottom: var(--gutter-small); */
 }
 
 @media(max-width: 500px) {
@@ -204,6 +195,7 @@ h3 {
 
 p {
     margin: var(--gutter-small-1) 0;
+    font-weight: bold;
 }
 
 @media(max-width: 900px) {
@@ -218,14 +210,19 @@ p {
 
 a {
     color: var(--white);
-    font-weight: 400;
-    font-family: 'Jost', sans-serif;
+    font-weight: 600;
     transition: all .2s;
     outline: 2px solid transparent;
 }
 
 ::-moz-focus-inner {
     border: 0;
+}
+
+span
+{
+    font-weight: 600;
+    font-size: var(--font-size-medium)
 }
 
 button:focus,
@@ -253,6 +250,144 @@ body:not(.user-is-tabbing) a:focus {
     font-family: var(--font-stack);
 }
 
+.work
+{
+    margin: 0 auto;
+}
+
+.projects
+{
+    /* align-items: flex-start; */
+    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0 0 32px;
+    padding-bottom: var(--gutter-huge);
+}
+
+.code_breakdowns
+{
+    align-items: center;
+    position: relative;
+    flex-flow: wrap column;
+    display: flex;
+    margin: 0 0 32px;
+}
+
+@media (max-width: 800px)
+{
+    .projects
+    {
+        flex-direction: column;
+    }
+}
+
+.project-card
+{
+    width: calc(50% - 16px);
+    display: flex;
+    text-decoration: none;
+}
+
+.work_card
+{
+    width: calc(75% - 16px);
+    display: flex;
+    flex-flow: wrap column;
+    text-decoration: none;
+}
+
+.work_button
+{
+    display: flex;
+    flex-flow: wrap column;
+    border: none;
+    color: #fff;
+    margin: 8px;
+    flex-grow: 1;
+    background-color: var(--card-default-color);
+    transition: .5s;
+}
+
+.card_button
+{
+    display: flex;
+    flex-flow: wrap column;
+    border: none;
+    color: #fff;
+    margin: 8px;
+    flex-grow: 1;
+    background-color: var(--card-default-color);
+    transition: .5s;
+}
+
+.card_button:hover
+{
+    cursor: pointer;
+    background-color: var(--card-hover-color);
+
+    .card-header
+    {
+        color: var(--white);   
+    }
+
+    .header_image
+    {
+        filter: invert(0%);
+    }
+
+}
+
+.card-video
+{
+    width: 100%;
+    vertical-align: top;
+}
+
+.header_container
+{
+    display: flex;
+    align-items: center;
+    margin: 16px 5% 16px 5%;
+}
+
+.header_image
+{
+    width: 10%;
+    height: fit-content;
+    margin-left: auto;
+    filter: invert(100%);
+    transition: 0.5s;
+}
+
+.card-header
+{
+    color: var(--card-header-color);
+    font-weight: 600;
+    /* margin: 16px 5% 0px 5%; */
+    display: flex;
+    flex-flow: wrap column;
+    text-align: left;
+    transition: 0.5s;
+}
+
+.card-header small
+{
+    color: var(--white);
+    font-weight: 300;
+    font-style: italic;
+    font-size: var(--font-size-medium);
+}
+
+.project-description
+{
+    margin: 0 5% 32px 5%;
+    text-align: left;
+    font-family: var(--font-stack);
+    font-size: var(--font-size-small);
+    font-weight: 400;
+}
+
 .link:hover {
     color: var(--blue);
 }
@@ -265,7 +400,7 @@ body:not(.user-is-tabbing) a:focus {
     text-decoration: none;
     color: inherit;
     border: 1px solid  var(--blue);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .btn:focus {
@@ -376,6 +511,17 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+@media only screen and (min-width:1200px) 
+{
+    .content {
+      max-width:1168px;
+    }
+}
+
+.content 
+{
+    margin: 0 auto;
+}
 /* --------------------------------------- */
 /* ----- Navigation ----- */
 /* --------------------------------------- */
@@ -702,6 +848,12 @@ body:not(.user-is-tabbing) a:focus {
 
 .footer__social-image {
     height: 4rem;
+    transition: 0.5s;
+}
+
+.footer__social-image:hover
+{
+    height: 5rem;
 }
 
 .footer__github-buttons {

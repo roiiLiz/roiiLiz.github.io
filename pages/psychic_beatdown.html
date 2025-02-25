@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/ico" href="../images/favicon.ico" />
+  <title>
+    Psychic Beatdown
+  </title>
+
+  <meta name="description" content="Psychic Beatdown Code Breakdown">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Unreal Engine 5.4, UE5.4, UE" />
+  <link rel="stylesheet" type="text/css" href="../index.css" />
+  <script defer src="../index.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item hidden">
+            <a href="../index.html" class="nav__link">Home</a>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          Psychic Beatdown
+        </h1>
+        </br>
+        <div class="work__text">
+          <a class="btn btn--blue" href="https://github.com/roiiLiz/PsychicBeatdown/releases/tag/v0.1.1-prototype" target="_blank">Download Game</a>
+        </div>
+      </div>
+    </div>
+  </header>
+    <!-- ***** Work ***** -->
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <p>
+          Psychic Beatdown is an arcade-esque wave shooter made as a personal project. Made in Unity using C#, I wrote all of the code for the game. The majority of my work revolves around the throwing mechanic, the combo meter, and the wave system.
+          </br>
+          </br>
+        </p>
+        <div class="code_breakdowns">
+          <!-- Each div with the work__box class is a project. -->
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/psychic_beatdown_2.gif" class="card-video" alt="Throw Example" />
+              </div>
+              <div class="header_container">
+                <h3 class="card-header">
+                  Throw Mechanic
+                </h3>
+              </div>
+              <p class="project-description">
+                The ability to pick up an enemy and throw them is one of the key mechanics of Psychic Beatdown.
+                </br>
+                </br>
+                Each object that is throwable has a ThrowableObject component, which has fields defining an object's throwable statistics such as thrown speed, rotational speed, and an isHeld boolean. Once clicked on, a ThrowManager communicates with the object, setting it as the held object if the player doesn't already have one. To seperate thrown objects from regular objects, all thrown objects are relegated to a different physics layer.
+              </p>
+              <div class="work__text">
+                <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/53cef3eed8f23ab89726a8231aa389dd" target="_blank">ThrowableObject Code</a>
+                <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/b71b660c605e8675b0c9992eda687ec6" target="_blank">ThrowManager Code</a>
+              </div>
+            </button>
+          </div>
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/psychic_beatdown_1.gif" class="card-video" alt="Combo Meter" />
+              </div>
+              <div class="header_container">
+                <h3 class="card-header">
+                  Combo Meter
+                </h3>
+              </div>
+              <p class="project-description">
+                As a way to incentivize players to prioritize attacking, Psychic Beatdown uses a combo meter ranging from a 1x score multiplier at F rank all the way to a 4x multiplier at S rank.
+                </br>
+                </br>
+                The ComboManager script handles all the logic for maintaining and increasing the length of the player's combo. When an enemy dies, an event is fired, which the ComboManager listens for, either starting the combo or increasing its duration if it already exists. Once the combo meter runs out or if the player dies, the total combo score is calculated and added to the player's total score.
+                </br>
+                </br>
+                Combos are derived from the Combo class, which is a scriptable object used to make constructing combo breakpoints easier, defining characteristics such as combo letter, multiplier, color, and score threshold. 
+              </p>
+              <div class="work__text">
+                <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/dcbcb4f9acfc5d243c1eb3617e8a2e56" target="_blank">Combo Manager Code</a>
+                <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/f8e68088bcd4dab598560a8177b936b3" target="_blank">Combo Class</a>
+              </div>
+            </button>
+          </div>
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/psychic_beatdown_3.gif" class="card-video" alt="Wave System" />
+              </div>
+              <div class="additional-info">
+    
+              </div>
+              <div class="header_container">
+                <h3 class="card-header">
+                  Wave System
+                </h3>
+              </div>
+              <p class="project-description">
+                Psychic Beatdown's gameplay is divided into waves, with each wave being comprised of a number of randomized enemies. Waves are split into three main parts: waves, wave spawning, and looping.
+                </br>
+                </br>
+                Waves are made from the Wave class, which holds data important to waves such as the name, wave amount, loop multiplier, and the wave enemies. Each type of enemy in a wave's composition is given a weight, which is used to randomly determine what enemy is ultimately spawned. 
+                </br>
+                </br>
+                Wave spawning is split between the WaveSpawner script and the WaveManager script, which spawn and manage waves, respectively. Specifically, the WaveSpawner is solely responsible for spawning waves, while the WaveManager is responsible for relaying and acting upon current wave data.
+                </br>
+                </br>
+                Once the full list of unique waves has been looped through, a loop occurs, which makes the game harder in two specific ways. Firstly, the game's overall speed increases in 25% increments, and secondly, loop enemies begin to spawn, which are stronger variants of default enemies.
+              </p>
+              <div class="work__text">
+                <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/ec09434cd6ca1b211d61e0fcf457c9e4" target="_blank">Wave Class</a>
+                <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/76980c9578b192493c9f2b5511e379f2" target="_blank">Wave Spawner Code</a>
+                <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/847ae956606b30cd976088fc71d72ff2" target="_blank">Wave Manager Code</a>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- ***** Footer ***** -->
+  <!-- <footer role="contentinfo" class="footer"> -->
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/roiiLiz" title="Link to my Github Profile">
+            <img src=".././images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/liz-thompson-172457337/">
+            <img src=".././images/linkedin.svg" title="Link to my LinkedIn Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+      <p>
+        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+      </p>
+      <div class="footer__github-buttons">
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+        </iframe>
+      </div>
+    </div>
+  <!-- </footer> -->
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src=".././images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+</body>
+
+</html>

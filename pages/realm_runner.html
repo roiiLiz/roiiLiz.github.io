@@ -13,6 +13,8 @@
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="Unreal Engine 5.4, UE5.4, UE" />
   <link rel="stylesheet" type="text/css" href="../index.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script defer src="../index.js"></script>
 </head>
 
@@ -33,84 +35,120 @@
       <div class="header__text">
         <h1 class="heading-primary">
           <!-- Replace the following name with your name -->
-          <span>Realm Runner</span>
+          Realm Runner
         </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p class="hidden">Code Breakdown</p>
+        </br>
+        <div class="work__text">
+          <a class="btn btn--blue" href="https://github.com/RealmRunner24/RRplaytestrepo/releases/tag/PlaytestingBuilds" target="_blank">Download Game</a>
+        </div>
       </div>
     </div>
   </header>
 
 
     <!-- ***** Work ***** -->
+
     <section class="work" id="work">
       <div class="row">
         <h2>My Work</h2>
-        <p>All code is available upon request.</p>
-        <div class="work__boxes">
+        <p>
+          Realm Runner is a Sonic-like action platformer made in Unreal Engine 5.4. Written in Blueprint, my main work revolves around creating a player controller that can maintain a sense of momentum and velocity while also reacting to and adapting to level geometry with dynamic gravity.
+          <br/>
+          <br/>
+          In addition, I developed both the homing attack system and the item system. The homing attack utilizes interfaces, while the item system makes use of inheritance to make designing and integrating new items and targetable objects easier for designers.
+        <div class="code_breakdowns">
           <!-- Each div with the work__box class is a project. -->
-          <button type="button" class="collapsible">Character Movement</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Character Movement</h3>
-              <p>
-                One of my main responsibilities on this project was the creation of a character controller which could handle dynamic gravity, as well as maintaining good control throughout.
-              </p>
-              <p>
-                The player's dynamic gravity is calculated using the normal of the ground underneath them. Due to the changing gravity, constant calculations are made to determine the player's movement vectors using the cross product.
-              </p>
-              <a class="btn" href="https://blueprintue.com/blueprint/xmq0vbj7/" target="_blank">Movement Vector Code</a>
-              <a class="btn" href="https://blueprintue.com/blueprint/mzsl5al2/" target="_blank">Wall Sticking Code</a>
-            </div>
-            <div class="work__image-box hidden">
-              <img width="525" height="350" src="../images/slope movement.gif" alt="Slope Movement Example">
-            </div>
-
-                <!-- <div class="grid__item3">
-                  <img src="../images/IMG_3719.png" class="work__image" alt="Movement Blueprint"></img>
-                </div> -->
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/slope movement.gif" class="card-video" alt="Slope Movement" />
               </div>
-            </div>
-          
-          <button type="button" class="collapsible">Homing Attack</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Homing Attack</h3>
-              <p>
-                Several interactable objects within levels, whether it be boost pads, springs, or enemies, are able to be targeted with a homing attack. 
-              </p>
-              <p>
-                Using an interface called BPI_TargetFunctionality, each targetable object can implement it's own logic for the target point of the homing attack. 
-              </p>
-              <a class="btn" href="https://blueprintue.com/blueprint/xmq0vbj7/" target="_blank">Homing Attack Code</a>
-              <a class="btn" href="https://blueprintue.com/blueprint/vs2434n2/" target="_blank">Calculate Closest Target</a>
-              <a class="btn" href="https://blueprintue.com/blueprint/21zg--n7/" target="_blank">Perform Homing Attack</a>
-            </div>
-              <!-- <a class="btn" href="https://blueprintue.com/blueprint/mzsl5al2/" target="_blank">Wall Sticking Code</a> -->
-              <div class="work__image-box hidden">
-                <img width="525" height="350" src="../images/homing attack.gif" alt="Homing Attack Example">
+              <div class="header_container">
+                <h3 class="card-header">
+                  Player Movement
+                </h3>
               </div>
-            </div>
-
-            <button type="button" class="collapsible">Items</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Items</h3>
-              <p>
-                After finishing each level, the player is presented a choice between three different items, each of which provide the player with a unique power.  
+              <p class="project-description">
+                Player movement can be broken down into three main sections: determining the direction of gravity, adjusting the movement vectors to match the new gravity, and aligning the camera with the new gravity.
+                </br>
+                </br>
+                First, the player fires a short line trace underneath their feet to see if they're touching the floor. If a hit is successful, the inverse of the normal of the hit object gives us the new direction of gravity. This vector is normalized to a length of 1 to prevent any issues while changing gravity.
+                </br>
+                </br>
+                Then, the player's forward movement vector must be adjusted to match the new gravity. This is determined by getting the unit vector of the distance from the player to a forward point, which is attached to the player's character. The player always moves "forward," so to speak, using their movement to turn towards the desired movement direction.
+                </br>
+                </br>
+                Finally, the camera must be updated to smoothly follow the player's gravity. The camera is attached to a root node, which is detached from the player, and then has its position and rotation updated to match the player's location and current gravity direction, respectively. Finally, if the player is moving fast enough, their forward-looking direction is determined from the current camera Z rotation, as well as player movement input.
               </p>
-              <p>
-                Items inherit from a base item class, and are stored in an inventory component which persists between levels. 
-              </p>
-              <a class="btn" href="https://blueprintue.com/blueprint/ezljika-/" target="_blank">Base Item</a>
-              <a class="btn" href="https://blueprintue.com/blueprint/uys33ak1/" target="_blank">Example Item: X-Ray Goggles</a>
-            </div>
-              <div class="work__image-box hidden">
-                <img width="525" height="350" src="../images/item example.gif" alt="Item Example">
+              <div class="work__text">
+                <a class="btn btn--blue" href="https://blueprintue.com/blueprint/2udrcxt2/" target="_blank">Gravity Changing Code</a>
+                <a class="btn btn--blue" href="https://blueprintue.com/blueprint/360p4rcz/" target="_blank">Calculate Forward Vector Code</a>
+                <a class="btn btn--blue" href="https://blueprintue.com/blueprint/1uptpmb3/" target="_blank">Update Camera Code</a>
               </div>
-            </div>
+            </button>
+          </div>
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/homing attack.gif" class="card-video" alt="Homing Attack" />
+              </div>
+              <div class="header_container">
+                <h3 class="card-header">
+                  Homing Attack
+                </h3>
+              </div>
+              <p class="project-description">
+                One of the biggest challenges of designing a homing attack system is determining how an object in the world becomes a target. 
+                </br>
+                </br>
+                For Realm Runner, I decided that using interfaces would be the most ideal solution. This is mainly due to two reasons: firstly, interfaces allow the homing attack system to not know about what it is targeting, just that it is targeting something. Secondly, by letting objects define their own targetability behavior, an interface scales with an object's complexity.
+                </br>
+                </br>
+                Each targetable object implements a BPI_Targetable interface, which has a single function, TargetFunctionality, that returns a Vector3 targetPosition. The homing attack function calls TargetFunctionality to get the world space position of a targetable object, which is used to ultimately determine the homing attack target.
+                </br>
+                </br>
+                Another aspect of the homing attack system is the selection algorithm. Using the dot product, it is possible to determine how closely the player is looking at a given targetable object. The object with the highest dot product is chosen as the target.
+              </p>
+              <div class="work__text">
+                <a class="btn btn--blue" href="https://blueprintue.com/blueprint/qj2_xume/" target="_blank">Homing Attack Code</a>
+                <a class="btn btn--blue" href="https://blueprintue.com/blueprint/b6gte3i0/" target="_blank">Calculate Closest Target</a>
+                <a class="btn btn--blue" href="https://blueprintue.com/blueprint/auf7hs4j/" target="_blank">Perform Homing Attack</a>
+              </div>
+            </button>
+          </div>
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/item example.gif" class="card-video" alt="Item Example" />
+              </div>
+              <div class="additional-info">
+    
+              </div>
+              <div class="header_container">
+                <h3 class="card-header">
+                  Item System
+                </h3>
+              </div>
+              <p class="project-description">
+                After finishing each level, the player is presented with a choice between three different items, each of which provides the player with a unique power. The item system is split into two parts, being individual item logic and item storage.  
+                </br>
+                </br>
+                For individual items, all items inherit from an abstract base item class that defines a few parameters that all items have, such as a name, description, and icon. All items can be called by a base event OnItemActivate, which is used to activate and drive the logic for items. Inheritance is used as a way to ensure that all items share a common way to be activated, as well as a common set of characteristics. 
+                </br>
+                </br>
+                As for item storage, an inventory system is created to store items between levels by reading and writing inventory data to a persistent game manager.
+              </p>
+              <div class="work__text">
+                <a class="btn btn--blue" href="https://blueprintue.com/blueprint/2uc7oah4/" target="_blank">Base Item</a>
+                <a class="btn btn--blue" href="https://blueprintue.com/blueprint/cp32gp-j/" target="_blank">Example Item: X-Ray Goggles</a>
+              </div>
+            </button>
           </div>
         </div>
+      </div>
     </section>
   <!-- ***** Footer ***** -->
 

@@ -13,6 +13,8 @@
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="Unity" />
   <link rel="stylesheet" type="text/css" href="../index.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script defer src="../index.js"></script>
 </head>
 
@@ -33,10 +35,12 @@
       <div class="header__text">
         <h1 class="heading-primary">
           <!-- Replace the following name with your name -->
-          <span>Reflection Quest</span>
+          Reflection Quest
         </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p class="hidden">Code Breakdown</p>
+        </br>
+        <div class="work__text">
+          <a class="btn btn--blue" href="https://ninenytes.itch.io/reflection-quest" target="_blank">Download Game</a>
+        </div>
       </div>
     </div>
   </header>
@@ -46,63 +50,85 @@
     <section class="work" id="work">
       <div class="row">
         <h2>My Work</h2>
-        <p>All code is available upon request.</p>
-        <div class="work__boxes">
+        <p>
+          Reflection Quest is a 2.5D action RPG made in Unity 3D and written in C#. Developed by Nine Nytes, I worked on the game's unique 2.5D visual aesthetic, the game's options and persistent game data, as well as a few of the game's power-ups.
+          </br>
+          </br>
+        </p>
+        <div class="code_breakdowns">
           <!-- Each div with the work__box class is a project. -->
-          <button type="button" class="collapsible">2.5D Camera</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>2.5D Camera</h3>
-              <p>
-                One of Reflection Quest's most unique features is its pixelated 3D aesthetic. Typically, this effect is achieved through the use of custom shader, however this could not be used due to complications with the version of Unity used for the project.
-              </p>
-              <p>
-                Instead, the game utilizes a dual camera set-up to output and display a pixelated game world without downscaling resolution, allowing for high fidelity graphics in the UI.
-              </p>
-            </div>
-            <div class="work__image-box hidden">
-              <img width="525" height="350" src="../images/camera.gif" alt="2.5D Camera Example">
-            </div>
-
-                <!-- <div class="grid__item3">
-                  <img src="../images/IMG_3719.png" class="work__image" alt="Movement Blueprint"></img>
-                </div> -->
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/camera.gif" class="card-video" alt="2.5D Visuals" />
               </div>
-            </div>
-          
-          <button type="button" class="collapsible">Modular Swords</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Modular Swords</h3>
-              <p>
-                The player is given the option of selecting one of three different swords to help them on their journey.  
-              </p>
-              <p>
-                Leveraging Unity's ScriptableObjects, the data of any sword can quickly be changed in editor. This includes the sword's model, damage, and power.
-              </p>
-            </div>
-              <div class="work__image-box hidden">
-                <img width="525" height="350" src="../images/swords.gif" alt="Modular Swords Example">
+              <div class="header_container">
+                <h3 class="card-header">
+                  2.5D Visual Shader
+                </h3>
               </div>
-            </div>
-
-            <button type="button" class="collapsible">Event-Based Powers</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Event-Based Powers</h3>
-              <p>
-                Using an event based architecture, each sword's powers can inform all systems when an ability has been started.  
+              <p class="project-description">
+                One of Reflection Quest's most unique features is its pixelated 3D aesthetic. At first, a visual shader was proposed to achieve this effect. However, due to complications related to the version of Unity3D that the game uses, a traditional shader could not be used.
+                <br/>
+                <br/>
+                Adapting to this difficulty, the game utilizes a dual camera set-up to output and display a pixelated game world without downscaling resolution, allowing for high-fidelity graphics in the UI. While this method requires two cameras to be set up in each scene using the visual effect, the visual effect was ultimately achieved without requiring a version change.
               </p>
-              <p>
-                For example, the ability of the Fire Sword can inform the UI to start a visual cooldown and inform its target that it's been hit and apply damage effects.
-              </p>
-            </div>
-              <div class="work__image-box hidden">
-                <img width="525" height="350" src="../images/event.gif" alt="Event Architecture Example">
+              <div class="work__text">
+                <!-- <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/6db0f810b508e8c74e420067907602ad" target="_blank">Custom Time Scale Code</a> -->
               </div>
-            </div>
+            </button>
+          </div>
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/swords.gif" class="card-video" alt="Swords Example" />
+              </div>
+              <div class="header_container">
+                <h3 class="card-header">
+                  Saving and Loading
+                </h3>
+              </div> 
+              <p class="project-description">
+                In Reflection Quest, several variables must be tracked. For example, the player must progress through three different levels and acquire the mirror shards found at the end in order to unlock the final level.
+                <br/>
+                <br/>
+                Leveraging Unity's ScriptableObjects, both game data and player options are written to and read from easily. As a benefit of using ScriptableObjects, data can be changed during runtime and be saved in the editor, making designing easier.
+              </p>
+              <div class="work__text">
+                <!-- <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/f38b49ffb000667359dcd281bb4ff01f" target="_blank">Health Component Code</a> -->
+                <!-- <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/7dc011ac16d6b41c9ae8ffc6f5791d0a" target="_blank">Death Component Code</a> -->
+              </div>
+            </button>
+          </div>
+          <div class="work_card">
+            <!-- Psychic Beatdown -->
+            <button type="button" class="card_button">
+              <div class="card-video">
+                <img src="../images/event.gif" class="card-video" alt="Powerups" />
+              </div>
+              <div class="additional-info">
+    
+              </div>
+              <div class="header_container">
+                <h3 class="card-header">
+                  Power System
+                </h3>
+              </div>
+              <p class="project-description">
+                Each sword in Reflection Quest has a unique powerm which is used to progress through the game, such as a water shield to protect yourself from damage or a fireball projectile to damage enemies from range.
+                <br/>
+                <br/>
+                Powers inherit from a base abstract class SpecialAttack, which defines a few parameters and functions each power requires, such as cooldown, if the power is allowed to be used, as well as a function to activate the power. Each power is then able to define its own implementation, while the sword itself just calls a base function without needing to know what power it is using specifically.
+              </p>
+              <div class="work__text">
+                <!-- <a class="btn btn--blue" href="https://gist.github.com/roiiLiz/d57a82ca4360698b9224024783a93f62" target="_blank">Upgrade System Code</a> -->
+              </div>
+            </button>
           </div>
         </div>
+      </div>
     </section>
   <!-- ***** Footer ***** -->
 

@@ -13,11 +13,13 @@
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="HTML, CSS, JavaScript, C#, GDScript" />
   <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script defer src="index.js"></script>
 </head>
 
 <body>
-
+  <div class="content">
   <!-- ***** Header ***** -->
 
   <header class="header" role="banner" id="top">
@@ -40,151 +42,133 @@
       <div class="header__text">
         <h1 class="heading-primary">
           <!-- Replace the following name with your name -->
-          <span>Liz Thompson</span>
+          Liz Thompson
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p class="hidden">Game Play Programmer</p>
+        <p class="hidden">Gameplay Programmer</p>
         <a href="#contact" class="btn btn--blue hidden">Contact Me</a>
       </div>
     </div>
   </header>
 
   <main role="main">
-
     <!-- ***** Work ***** -->
-
     <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-          <button type="button" class="collapsible">Aparkalypse</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Aparkalypse</h3>
-              <p>
-                Made as part of the 2025 FIEA Collegiate GameJam, Aparkalypse is team GRIMSING RUNNERS' submission for the Undergraduate division.  
-              </p>
-              <p>
-                Following the "Theme Park" theme, Aparkalypse is a lane-based tower defense game where you defend your amusement park from sentient rollercoaster rides.
-              </p>
-
-              <a href="pages/aparkalypse.html" class="btn btn--blue hidden" target="_blank" title="Code Breakdown">About the Jam</a>
-
-              <div class="work__links hidden">
-                <a href="https://github.com/roiiLiz/Aparkolypse" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/roiiLiz" target="_blank">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
+      <h2>School Projects</h2>
+      <div class="projects">
+        <!-- Realm Runner -->
+        <a href="pages/realm_runner.html" target="_blank" class="project-card">
+          <button type="button" class="card_button">
+            <div class="card-video">
+              <img src="./images/slope movement.gif" class="card-video" alt="Realm Runner" />
             </div>
-            <div class="work__image-box hidden">
-              <embed width="525" height="350" src="https://www.youtube.com/embed/KdQHi7HTlwk?list=PLifzMiArU4Sdh44pIhG7dC0YbpZri8k8_" title="Aparkalypse by GRIMSING RUNNERS (UCF)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></embed>
-            </div>
-          </div>
-          <!-- Each div with the work__box class is a project. -->
-          <button type="button" class="collapsible">Time Bullet</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Time Bullet</h3>
-              <p>
-                A top-down shootem' up with rougelite elements developed by myself. Equipped with time altering abilities, the Robot takes on hordes of enemies to defeat the Eternal Order, gathering upgrades to his weaponry and body along the way.
-              </p>
-              <ul class="work__list hidden">
-                <li>Unity</li>
-                <li>C#</li>
-                <li>Component Pattern</li>
-                <li>Scriptable Objects</li>
-              </ul>
+            <div class="additional-info">
 
-              <a href="pages/time_bullet.html" class="btn btn--blue hidden" target="_blank" title="Code Breakdown">Code Breakdown</a>
-
-              <div class="work__links hidden">
-                <a href="https://github.com/roiiLiz/TimeBullet" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/roiiLiz" target="_blank">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
             </div>
-            <div class="work__image-box hidden">
-              <img src="./images/timeBullet.gif" class="work__image" alt="Time Bullet" />
+            <div class="header_container">
+              <h3 class="card-header">
+                Realm Runner
+                <small>Gameplay Programmer</small>
+              </h3>
+              <img src="./images/ue.svg" class="header_image"/>
             </div>
-          </div>
-
-          <button type="button" class="collapsible">Realm Runner</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Realm Runner</h3>
-              <p>
-                An action platformer-rougelite hybrid made by Sky Stride Games. Compete for the title of Realm Runner as Astro, speeding your way through a myriad of realms and environments!
-              </p>
+            <p class="project-description">
+              Realm Runner is a Sonic-like action platformer made by Sky Stride Studios as a capstone project. I created and iterated upon the character movement, the item system, and the homing attack. In addition, I managed the project's version control, maintaining and merging development branches.
+            </p>
+          </button>
+        </a>
+        <a href="pages/reflection_quest.html" target="_blank" class="project-card">
+          <button type="button" class="card_button">
+            <div class="card-video">
+              <img src="./images/camera.gif" class="card-video" alt="Reflection Quest" />
+            </div>
+            <div class="additional-info">
   
-              <ul class="work__list hidden">
-                <li>Unreal Engine 5.4</li>
-                <li>Blueprints</li>
-                <li>Character Movement</li>
-                <li>Gameplay Systems</li>
-              </ul>
-
-              <a href="pages/realm_runner.html" class="btn btn--blue hidden" target="_blank" title="Code Breakdown">Code Breakdown</a>
-
-              <div class="work__links hidden">
-                <a href="https://chandlercrum.itch.io/realm-runner" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/roiiLiz" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
             </div>
-          
-          
-            <div class="work__image-box hidden">
-              <!-- In the future, replace this with trailer video -->
-              <img src="./images/realm runner.gif" class="work__image" alt="Realm Runner" />
-              <!-- <embed width="525" height="350" src="https://www.youtube.com/embed/a6oPJT0r7a8" title="astro homing attack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></embed> -->
+            <div class="header_container">
+              <h3 class="card-header">
+                Reflection Quest
+                <small>Technical Designer</small>
+              </h3>
+              <img src="./images/unity.svg" class="header_image"/>
             </div>
-          </div>
-          
-          <button type="button" class="collapsible">Reflection Quest</button>
-          <div class="work__box">
-            <div class="work__text hidden">
-              <h3>Reflection Quest</h3>
-              <p>
-                A 3rd person 3D RPG made by Nine Nytes. On the quest to obtain his knighthood, the Squire must traverse through the mirrors, portals to worlds full of fantasy and dangerous... slimes?! 
-              </p>
-              <p>
-                Gather the three mirror shards, repair the broken mirror, and defeat the Slime King!
-              </p>
-              <ul class="work__list hidden">
-                <li>Unity</li>
-                <li>C#</li>
-                <li>Character Movement</li>
-                <li>Camera Effects / Visual Shaders</li>
-              </ul>
-
-              <a href="pages/reflection_quest.html" class="btn btn--blue hidden" target="_blank" title="Code Breakdown">Code Breakdown</a>
-
-              <div class="work__links hidden">
-                <a href="https://ninenytes.itch.io/reflection-quest" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/roiiLiz" target="_blank">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box hidden">
-              <embed width="525" height="350" src="https://www.youtube.com/embed/91rtxY23gso" title="Reflection Quest Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></embed>
-            </div>
-          </div>
-
-        </div>
+            <p class="project-description">
+              Reflection Quest is an action RPG made by Nine Nytes. I was responsible for the player's movement, the saving and loading of player settings, and utilizing events to create a modular ability system. In addition to this, I also implemented the visual shader used to create the game's 2.5D aesthetic.
+            </p>
+          </button>
+        </a>
       </div>
+      <h2>Personal Projects</h2>
+      <div class="projects">
+      <a href="pages/psychic_beatdown.html" target="_blank" class="project-card">
+        <!-- Psychic Beatdown -->
+        <button type="button" class="card_button">
+          <div class="card-video">
+            <img src="./images/psychic_beatdown_1.gif" class="card-video" alt="Psychic Beatdown" />
+          </div>
+          <div class="additional-info">
+
+          </div>
+          <div class="header_container">
+            <h3 class="card-header"> 
+              Psychic Beatdown
+              <small>Programmer</small>
+            </h3>
+            <img src="./images/unity.svg" class="header_image"/>
+          </div>
+          <p class="project-description">
+            Psychic Beatdown is an arcade-esque wave shooter that started as part of a graduate school application. I created a throwing mechanic, a combo meter, and a wave system. You play as a wizard with the power to throw both objects and enemies with their mind, trying to earn as high of a score as possible.
+          </p>
+        </button>
+      </a>
+        <!-- Time Bullet -->
+      <a href="pages/time_bullet.html" target="_blank" class="project-card">
+        <button type="button" class="card_button">
+          <div class="card-video">
+            <img src="./images/timeBullet.gif" class="card-video" alt="Time Bullet" />
+          </div>
+          <div class="additional-info">
+
+          </div>
+          <div class="header_container">
+            <h3 class="card-header"> 
+              Time Bullet
+              <small>Programmer</small>
+            </h3>
+            <img src="./images/unity.svg" class="header_image"/>
+          </div>
+          <p class="project-description">
+            Time Bullet is a wave shooter made as a personal project. I developed an upgrade system, leveraged Unity's scriptable objects, and implemented a custom time scale ability. You play as a robot rebelling against the tyrannical Eternal Order, who seek to hold control over all of time.
+          </p>
+        </button>
+      </a>
+
+      
+      <!-- Aparkalypse -->
+      <!-- <a href="pages/aparkalypse.html" target="_blank" class="project-card">
+        <button type="button" class="card_button">
+            <div class="card-video">
+              <img src="./images/apark gif.gif" class="card-video" alt="Aparkalypse" />
+            </div>
+            <div class="additional-info">
+              
+            </div>
+            <div class="header_container">
+              <h3 class="card-header">
+                Aparkalypse
+                <small>Programmer</small>
+              </h3>
+              <img src="./images/unity.svg" class="header_image"/>
+            </div>
+            <p class="project-description">
+              Aparkalypse is a project developed by team GRIMSING RUNNERS during the 2025 FIEA Colliegate Game Jam. The game is a tower defense themed around defending an amusement park from mutated park rides. 
+            </p>
+          </button>
+        </a> -->
+    </div>
+      <!-- Reflection Quest -->
     </section>
+    
     <!-- ***** About ***** -->
 
     <section class="about" id="about">
@@ -194,10 +178,11 @@
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
             <p>
-              Hey, I'm Liz! I am a gameplay oriented programmer with experience in Unreal Engine, Unity, and Godot. I have a deep passion for coding and programming, and I constantly seek to create novel, meaningful, and fun gameplay.
+              <span> Hey, I'm Liz! </span> <br/>
+              I am a gameplay-oriented programmer with experience in Unreal Engine, Unity, and Godot. I have a deep passion for coding and programming, and I constantly seek to create novel, meaningful, and fun gameplay.
             </p>
             <!-- Provide a link to your resume -->
-            <a href="./Thompson_Resume.pdf" target="_blank" class="btn">My Resume</a>
+            <a href="./Liz_Thompson_Resume.pdf" target="_blank" class="btn">My Resume</a>
           </div>
 
           <div class="about__photo-container">
@@ -226,7 +211,7 @@
       </div>
     </div>
   </section>
-
+  </div>
   <!-- ***** Footer ***** -->
 
   <!-- <footer role="contentinfo" class="footer"> -->
